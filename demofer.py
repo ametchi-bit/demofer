@@ -705,7 +705,7 @@ class VisionPlatform:
         logo_data_uri = None
         try:
             # Construct a robust path to the logo relative to this script file
-            logo_path = FILE.parent.parent / "media" / "fer_logo.png"
+            logo_path = FILE.parent / "media" / "fer_logo.png"
             if logo_path.exists():
                 with open(logo_path, "rb") as f:
                     logo_base64 = base64.b64encode(f.read()).decode()
