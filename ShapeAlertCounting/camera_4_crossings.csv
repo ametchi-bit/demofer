@@ -1,0 +1,40 @@
+Timestamp,Object,Counter Shape Name,Count
+2025-05-27 15:50:55.125,Motion Detected,playce / camp,1
+2025-05-27 15:50:56.922,Motion Detected,main Road Angre entry,1
+2025-05-27 15:50:59.327,Motion Detected,main Road Angre entry,2
+2025-05-27 15:51:02.453,Motion Detected,main road angre out,1
+2025-05-27 15:51:02.456,Motion Detected,playce / camp,2
+2025-05-27 15:51:04.478,Motion Detected,playce / camp,3
+2025-05-27 15:51:06.531,Motion Detected,playce / camp,4
+2025-05-27 15:51:08.128,Motion Detected,main Road Angre entry,3
+2025-05-27 15:51:10.555,Motion Detected,main Road Angre entry,4
+2025-05-27 15:51:12.928,Motion Detected,playce / camp,5
+2025-05-27 15:51:14.941,Motion Detected,playce / camp,6
+2025-05-27 15:51:17.040,Motion Detected,main Road Angre entry,5
+2025-05-27 15:51:17.168,Motion Detected,playce / camp,7
+2025-05-27 15:51:18.839,Motion Detected,main road angre out,2
+2025-05-27 15:51:20.505,Motion Detected,playce / camp,8
+2025-05-27 15:51:20.909,Motion Detected,main road angre out,3
+2025-05-27 15:51:22.500,Motion Detected,playce / camp,9
+2025-05-27 15:51:24.631,Motion Detected,playce / camp,10
+2025-05-27 15:51:25.537,Motion Detected,main road angre out,4
+2025-05-27 15:51:27.005,Motion Detected,playce / camp,11
+2025-05-27 15:51:28.028,Motion Detected,main road angre out,5
+2025-05-27 15:51:30.083,Motion Detected,main road angre out,6
+2025-05-27 15:51:30.405,Motion Detected,playce / camp,12
+2025-05-27 15:51:37.683,Motion Detected,main Road Angre entry,6
+2025-05-27 15:51:43.428,Motion Detected,main road angre out,7
+2025-05-27 15:51:43.545,Motion Detected,playce / camp,13
+2025-05-27 15:51:43.992,Motion Detected,main Road Angre entry,7
+2025-05-27 15:51:50.867,Motion Detected,playce / camp,14
+2025-05-27 15:51:52.910,Motion Detected,playce / camp,15
+2025-05-27 15:51:54.949,Motion Detected,playce / camp,16
+2025-05-27 15:51:55.303,Motion Detected,main Road Angre entry,8
+2025-05-27 15:52:02.924,Motion Detected,main Road Angre entry,9
+2025-06-03 14:17:58.535,car,out angre  area,1
+2025-06-03 14:17:58.602,car,in out playce/camp zone,1
+2025-06-03 14:17:58.996,car,out angre  area,2
+2025-06-03 14:18:01.207,truck,out angre  area,3
+2025-06-03 14:18:03.388,truck,out angre  area,4
+2025-06-03 14:18:03.911,motorcycle,in Angre Area,1
+2025-06-03 14:18:06.367,truck,out angre  area,5

@@ -1,0 +1,64 @@
+[
+  {
+    "type": "line",
+    "start": [
+      806,
+      637
+    ],
+    "end": [
+      988,
+      398
+    ],
+    "name": "main Road Angre entry",
+    "color": "green"
+  },
+  {
+    "type": "line",
+    "start": [
+      1045,
+      395
+    ],
+    "end": [
+      1165,
+      240
+    ],
+    "name": "main road angre out",
+    "color": "green"
+  },
+  {
+    "type": "line",
+    "start": [
+      1154,
+      230
+    ],
+    "end": [
+      876,
+      206
+    ],
+    "name": "playce / camp",
+    "color": "green"
+  },
+  {
+    "type": "polygon",
+    "points": [
+      [
+        464,
+        481
+      ],
+      [
+        761,
+        250
+      ],
+      [
+        1035,
+        275
+      ],
+      [
+        780,
+        607
+      ]
+    ],
+    "name": "danger area",
+    "color": "cyan"
+  }
+]

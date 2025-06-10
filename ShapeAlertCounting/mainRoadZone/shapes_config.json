@@ -1,0 +1,81 @@
+[
+  {
+    "type": "line",
+    "start": [
+      1206,
+      237
+    ],
+    "end": [
+      1126,
+      404
+    ],
+    "name": "out angre  area",
+    "color": "green"
+  },
+  {
+    "type": "line",
+    "start": [
+      1111,
+      414
+    ],
+    "end": [
+      981,
+      688
+    ],
+    "name": "in Angre Area",
+    "color": "green"
+  },
+  {
+    "type": "line",
+    "start": [
+      977,
+      127
+    ],
+    "end": [
+      1227,
+      143
+    ],
+    "name": "in out playce/camp zone",
+    "color": "green"
+  },
+  {
+    "type": "line",
+    "start": [
+      436,
+      541
+    ],
+    "end": [
+      773,
+      677
+    ],
+    "name": "in out residential zone",
+    "color": "green"
+  },
+  {
+    "type": "polygon",
+    "points": [
+      [
+        751,
+        258
+      ],
+      [
+        575,
+        413
+      ],
+      [
+        576,
+        415
+      ],
+      [
+        846,
+        481
+      ],
+      [
+        982,
+        278
+      ]
+    ],
+    "name": "danger zone",
+    "color": "cyan"
+  }
+]
