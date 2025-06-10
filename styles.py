@@ -678,11 +678,15 @@ class StyleManager:
         </style>
         """
     
-    def create_main_header(self, title: str, subtitle: str) -> str:
+    def create_main_header(self, title: str, subtitle: str, logo_path=None) -> str:
         """Create main application header"""
+        logo_html = ""
+        if logo_path:
+            logo_html = f'<img src="{logo_path}" alt="FER Logo" style="width: 100px; height: 100px; border-radius: 50%;">'
+        
         return f"""
         <div class="main-header fade-in-up">
-            <img src="media/fer_logo.png" alt="FER Logo" style="width: 100px; height: 100px; border-radius: 50%;">
+            {logo_html}
             <h1>{title}</h1>
             <p>{subtitle}</p>
         </div>

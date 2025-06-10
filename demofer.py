@@ -701,9 +701,11 @@ class VisionPlatform:
     
     def render_main_header(self):
         """Render the main application header with language support"""
+        logo_path = "media/fer_logo.png"
         header_html = style_manager.create_main_header(
             _('app_title'),
-            _('app_subtitle')
+            _('app_subtitle'),
+            logo_path=logo_path if os.path.exists(logo_path) else None
         )
         st.markdown(header_html, unsafe_allow_html=True)
     
