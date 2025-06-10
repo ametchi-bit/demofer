@@ -686,7 +686,7 @@ class StyleManager:
         """Create main application header"""
         logo_html = ""
         if logo_data_uri:
-            logo_html = f'<div class="header-logo"><img src="{logo_data_uri}" alt="Logo" style="height: 50px; width: auto; max-width: 150px;"></div>'
+            logo_html = f'<div class="header-logo"><img src="{logo_data_uri}" alt="Logo" style="height: 60px; width: auto; max-width: 200px;"></div>'
 
         text_html = f"""
         <div class="header-text">
@@ -697,8 +697,8 @@ class StyleManager:
         
         return f"""
         <div class="main-header fade-in-up">
-            {text_html}
             {logo_html}
+            {text_html}
         </div>
         """
     

@@ -702,15 +702,18 @@ class VisionPlatform:
     
     def render_main_header(self):
         """Render the main application header with language support"""
-        logo_path = "media/fer_logo.png"
         logo_data_uri = None
-        if os.path.exists(logo_path):
-            try:
+        try:
+            # Construct a robust path to the logo relative to this script file
+            logo_path = FILE.parent.parent / "media" / "fer_logo.png"
+            if logo_path.exists():
                 with open(logo_path, "rb") as f:
                     logo_base64 = base64.b64encode(f.read()).decode()
                 logo_data_uri = f"data:image/png;base64,{logo_base64}"
-            except Exception as e:
-                logger.error(f"Error encoding logo image: {e}")
+            else:
+                logger.warning(f"Logo file not found at expected path: {logo_path}")
+        except Exception as e:
+            logger.error(f"Error processing logo image: {e}")
 
         header_html = style_manager.create_main_header(
             _('app_title'),
