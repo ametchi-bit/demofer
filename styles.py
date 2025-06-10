@@ -682,6 +682,7 @@ class StyleManager:
         """Create main application header"""
         return f"""
         <div class="main-header fade-in-up">
+            <img src="media/fer_logo.png" alt="FER Logo" style="width: 100px; height: 100px; border-radius: 50%;">
             <h1>{title}</h1>
             <p>{subtitle}</p>
         </div>
