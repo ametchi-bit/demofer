@@ -85,9 +85,11 @@ class StyleManager:
             margin-bottom: 2rem;
             box-shadow: var(--shadow-medium);
             color: var(--white); /* Text color on dark nav bar */
-            text-align: center;
             position: relative;
             overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }}
         
         .main-header::before {{
@@ -109,6 +111,7 @@ class StyleManager:
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
             position: relative;
             z-index: 1;
+            text-align: left;
         }}
         
         .main-header p {{
@@ -118,6 +121,7 @@ class StyleManager:
             opacity: 0.8;
             position: relative;
             z-index: 1;
+            text-align: left;
         }}
 
         /* Placeholder for Right-side yellow wave / FM 101.3 */
@@ -678,17 +682,23 @@ class StyleManager:
         </style>
         """
     
-    def create_main_header(self, title: str, subtitle: str, logo_path=None) -> str:
+    def create_main_header(self, title: str, subtitle: str, logo_data_uri=None) -> str:
         """Create main application header"""
         logo_html = ""
-        if logo_path:
-            logo_html = f'<img src="{logo_path}" alt="FER Logo" style="width: 100px; height: 100px; border-radius: 50%;">'
+        if logo_data_uri:
+            logo_html = f'<div class="header-logo"><img src="{logo_data_uri}" alt="Logo" style="height: 50px; width: auto; max-width: 150px;"></div>'
+
+        text_html = f"""
+        <div class="header-text">
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+        </div>
+        """
         
         return f"""
         <div class="main-header fade-in-up">
+            {text_html}
             {logo_html}
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
         </div>
         """
     

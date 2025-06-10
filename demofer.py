@@ -32,6 +32,7 @@ import json
 import csv
 import ast
 import pickle
+import base64
 from datetime import datetime, timedelta
 import torch
 from scipy import stats
@@ -702,10 +703,19 @@ class VisionPlatform:
     def render_main_header(self):
         """Render the main application header with language support"""
         logo_path = "media/fer_logo.png"
+        logo_data_uri = None
+        if os.path.exists(logo_path):
+            try:
+                with open(logo_path, "rb") as f:
+                    logo_base64 = base64.b64encode(f.read()).decode()
+                logo_data_uri = f"data:image/png;base64,{logo_base64}"
+            except Exception as e:
+                logger.error(f"Error encoding logo image: {e}")
+
         header_html = style_manager.create_main_header(
             _('app_title'),
             _('app_subtitle'),
-            logo_path=logo_path if os.path.exists(logo_path) else None
+            logo_data_uri=logo_data_uri
         )
         st.markdown(header_html, unsafe_allow_html=True)
     
