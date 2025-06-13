@@ -16,15 +16,16 @@ from scipy.interpolate import interp1d
 from collections import defaultdict
 import pandas as pd
 import base64
+from sort.sort import Sort
 
 # YOLO and tracking imports
 from ultralytics import YOLO
-try:
-    from sort.sort import Sort
-    SORT_AVAILABLE = True
-except ImportError:
-    print("Warning: SORT tracker not available. Vehicle tracking disabled.")
-    SORT_AVAILABLE = False
+# try:
+#     from sort.sort import Sort
+#     SORT_AVAILABLE = True
+# except ImportError:
+#     print("Warning: SORT tracker not available. Vehicle tracking disabled.")
+#     SORT_AVAILABLE = False
 
 # License plate processing imports
 try:
