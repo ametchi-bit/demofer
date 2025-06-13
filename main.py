@@ -28,19 +28,27 @@ from ultralytics import YOLO
 #     SORT_AVAILABLE = False
 
 # License plate processing imports
-try:
-    from utils import (
+from utils import (
         read_license_plate, 
         get_car, 
         write_csv,
         license_complies_format,
         generate_final_results_csv
     )
-    import easyocr
-    LICENSE_PLATE_UTILS_AVAILABLE = True
-except ImportError:
-    print("Warning: License plate utilities not available. OCR processing disabled.")
-    LICENSE_PLATE_UTILS_AVAILABLE = False
+import easyocr
+# try:
+#     from utils import (
+#         read_license_plate, 
+#         get_car, 
+#         write_csv,
+#         license_complies_format,
+#         generate_final_results_csv
+#     )
+#     import easyocr
+#     LICENSE_PLATE_UTILS_AVAILABLE = True
+# except ImportError:
+#     print("Warning: License plate utilities not available. OCR processing disabled.")
+#     LICENSE_PLATE_UTILS_AVAILABLE = False
 
 # Setup basic logging
 logging.basicConfig(level=logging.INFO)
