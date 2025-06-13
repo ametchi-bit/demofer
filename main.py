@@ -16,39 +16,30 @@ from scipy.interpolate import interp1d
 from collections import defaultdict
 import pandas as pd
 import base64
-from sort.sort import Sort
 
 # YOLO and tracking imports
 from ultralytics import YOLO
-# try:
-#     from sort.sort import Sort
-#     SORT_AVAILABLE = True
-# except ImportError:
-#     print("Warning: SORT tracker not available. Vehicle tracking disabled.")
-#     SORT_AVAILABLE = False
+try:
+    from sort.sort import Sort
+    SORT_AVAILABLE = True
+except ImportError:
+    print("Warning: SORT tracker not available. Vehicle tracking disabled.")
+    SORT_AVAILABLE = False
 
 # License plate processing imports
-from utils import (
+try:
+    from utils import (
         read_license_plate, 
         get_car, 
         write_csv,
         license_complies_format,
         generate_final_results_csv
     )
-import easyocr
-# try:
-#     from utils import (
-#         read_license_plate, 
-#         get_car, 
-#         write_csv,
-#         license_complies_format,
-#         generate_final_results_csv
-#     )
-#     import easyocr
-#     LICENSE_PLATE_UTILS_AVAILABLE = True
-# except ImportError:
-#     print("Warning: License plate utilities not available. OCR processing disabled.")
-#     LICENSE_PLATE_UTILS_AVAILABLE = False
+    import easyocr
+    LICENSE_PLATE_UTILS_AVAILABLE = True
+except ImportError:
+    print("Warning: License plate utilities not available. OCR processing disabled.")
+    LICENSE_PLATE_UTILS_AVAILABLE = False
 
 # Setup basic logging
 logging.basicConfig(level=logging.INFO)
