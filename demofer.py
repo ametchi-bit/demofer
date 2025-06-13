@@ -2227,7 +2227,7 @@ class VisionPlatform:
     
     def render_detection_tab(self, source_type: str, model, task_type: str, confidence: float):
         """Render the main detection tab"""
-        st.header(f"🎯 {_('detection_interface')} - {task_type}")
+        st.header(f" {_('detection_interface')} - {task_type}")
         
         # if source_type == IMAGE: # Commented out image interface rendering
         #     self.render_image_interface(model, task_type, confidence)
@@ -2304,7 +2304,7 @@ class VisionPlatform:
                 st.error(f"❌ {_('video_not_found')}: {video_path}")
         
         with col2:
-            st.markdown(f"### 🎛️ {_('processing_options')}")
+            #st.markdown(f"### 🎛️ {_('processing_options')}")
             
             # Consistent Save Video Checkbox for all video tasks
             save_video_checkbox_state = True # Default to True, user can uncheck

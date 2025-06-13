@@ -306,7 +306,7 @@ class LanguageManager:
             'select_camera_to_start': 'Select and connect a camera to start',
             
             # Processing Interface
-            'detection_interface': 'Detection Interface',
+            'detection_interface': 'Mode',
             'image_analysis': 'Image Analysis',
             'video_analysis': 'Video Analysis',
             'live_camera_analysis': 'Live Camera Analysis',
@@ -907,7 +907,7 @@ class LanguageManager:
             'select_camera_to_start': 'Sélectionnez et connectez une caméra pour démarrer',
 
             # Processing Interface
-            'detection_interface': 'Interface de Détection',
+            'detection_interface': 'Mode',
             'image_analysis': 'Analyse d\'Image',
             'video_analysis': 'Analyse Vidéo',
             'live_camera_analysis': 'Analyse Caméra en Direct',
