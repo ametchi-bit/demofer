@@ -135,8 +135,8 @@ class LanguageManager:
             st.rerun()  # This is outside the callback, so it works
         
         # Show current language status
-        current_lang_info = self.supported_languages[current_lang]
-        st.sidebar.info(f"Current: {current_lang_info['flag']} {current_lang_info['name']}")
+        # current_lang_info = self.supported_languages[current_lang]
+        # st.sidebar.info(f"Current: {current_lang_info['flag']} {current_lang_info['name']}")
     
     def initialize(self):
         """Initialize language manager"""

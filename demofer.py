@@ -805,7 +805,7 @@ class VisionPlatform:
         ]
         
         # 4. Task selection using keys
-        selected_key = st.selectbox(
+        selected_key = st.radio(
             _('task_selection'),
             selectable_model_keys, # Use the list of translation keys
             format_func=lambda key: _(key), # Translate keys for display
@@ -840,24 +840,26 @@ class VisionPlatform:
     def display_model_info(self, task_type):
         """Display enhanced model information"""
         if task_type == "Enhanced License Plate":
-            st.markdown(f"""
-            <div class="enhanced-license-info">
-                <h4>🚗 {_('enhanced_license_plate')}</h4>
-                <p>✅ {_('professional_tracking')}</p>
-                <p>✅ {_('advanced_ocr')}</p>
-                <p>✅ {_('real_time_visualization')}</p>
-                <p>✅ {_('comprehensive_analytics')}</p>
-            </div>
-            """, unsafe_allow_html=True)
+            # st.markdown(f"""
+            # <div class="enhanced-license-info">
+            #     <h4>🚗 {_('enhanced_license_plate')}</h4>
+            #     <p>✅ {_('professional_tracking')}</p>
+            #     <p>✅ {_('advanced_ocr')}</p>
+            #     <p>✅ {_('real_time_visualization')}</p>
+            #     <p>✅ {_('comprehensive_analytics')}</p>
+            # </div>
+            # """, unsafe_allow_html=True)
+            pass
         
         elif task_type == "Parking Detection":
-            st.markdown(f"""
-            <div class="model-info">
-                <h4>🅿️ {_('parking_detection')}</h4>
-                <p><strong>{_('task')}:</strong> {_('parking_occupancy')}</p>
-                <p><strong>{_('features')}:</strong> {_('parking_features')}</p>
-            </div>
-            """, unsafe_allow_html=True)
+            # st.markdown(f"""
+            # <div class="model-info">
+            #     <h4>🅿️ {_('parking_detection')}</h4>
+            #     <p><strong>{_('task')}:</strong> {_('parking_occupancy')}</p>
+            #     <p><strong>{_('features')}:</strong> {_('parking_features')}</p>
+            # </div>
+            # """, unsafe_allow_html=True)
+            pass
             
             # Parking-specific controls
             if PARKING_AVAILABLE and 'parking_config' in st.session_state:
@@ -899,25 +901,27 @@ class VisionPlatform:
                     st.write(f"🔴 {_('occupied_spots_color')}")
         
         elif task_type == "Counting & Alert System":
-            st.markdown(f"""
-            <div class="model-info">
-                <h4>📊 {_('counting_alert_system')}</h4>
-                <p><strong>{_('task')}:</strong> {_('motion_detection')}</p>
-                <p><strong>{_('features')}:</strong> {_('counting_features')}</p>
-            </div>
-            """, unsafe_allow_html=True)
+            # st.markdown(f"""
+            # <div class="model-info">
+            #     <h4>📊 {_('counting_alert_system')}</h4>
+            #     <p><strong>{_('task')}:</strong> {_('motion_detection')}</p>
+            #     <p><strong>{_('features')}:</strong> {_('counting_features')}</p>
+            # </div>
+            # """, unsafe_allow_html=True)
+            pass
             
             # Shape configuration selection
             self.render_shape_configuration()
         
         else:
-            st.markdown(f"""
-            <div class="model-info">
-                <h4>📋 {_('current_model')}: {task_type}</h4>
-                <p><strong>{_('real_time')}:</strong> ✅ {_('enabled')}</p>
-                <p><strong>{_('analytics')}:</strong> ✅ {_('available')}</p>
-            </div>
-            """, unsafe_allow_html=True)
+            # st.markdown(f"""
+            # <div class="model-info">
+            #     <h4>📋 {_('current_model')}: {task_type}</h4>
+            #     <p><strong>{_('real_time')}:</strong> ✅ {_('enabled')}</p>
+            #     <p><strong>{_('analytics')}:</strong> ✅ {_('available')}</p>
+            # </div>
+            # """, unsafe_allow_html=True)
+            pass
     
     def render_shape_configuration(self):
         """Render shape configuration for counting system"""
@@ -1077,44 +1081,45 @@ class VisionPlatform:
     
     def render_processing_controls(self):
         """Render processing control buttons"""
-        st.markdown(f"### {_('processing_options')}")
+       # st.markdown(f"### {_('processing_options')}")
         
-        col1, col2 = st.columns(2)
+        # col1, col2 = st.columns(2)
         
-        with col1:
-            if st.button(
-                _('start_processing'), 
-                key="start_btn", 
-                disabled=st.session_state.processing_active,
-                use_container_width=True,
-                type="primary"
-            ):
-                st.session_state.processing_active = True
-                st.session_state.processing_stats['start_time'] = time.time()
-                st.success(f"🚀 {_('processing_started')}")
-                st.rerun()
+        # with col1:
+        #     if st.button(
+        #         _('start_processing'), 
+        #         key="start_btn", 
+        #         disabled=st.session_state.processing_active,
+        #         use_container_width=True,
+        #         type="primary"
+        #     ):
+        #         st.session_state.processing_active = True
+        #         st.session_state.processing_stats['start_time'] = time.time()
+        #         st.success(f"🚀 {_('processing_started')}")
+        #         st.rerun()
         
-        with col2:
-            if st.button(
-                _('stop_processing'), 
-                key="stop_btn", 
-                disabled=not st.session_state.processing_active,
-                use_container_width=True
-            ):
-                st.session_state.processing_active = False
-                st.info(f"⏹️ {_('processing_stopped')}")
-                st.rerun()
+        # with col2:
+        #     if st.button(
+        #         _('stop_processing'), 
+        #         key="stop_btn", 
+        #         disabled=not st.session_state.processing_active,
+        #         use_container_width=True
+        #     ):
+        #         st.session_state.processing_active = False
+        #         st.info(f"⏹️ {_('processing_stopped')}")
+        #         st.rerun()
         
-        # Additional controls
-        col3, col4 = st.columns(2)
+        # # Additional controls
+        # col3, col4 = st.columns(2)
         
-        with col3:
-            if st.button(_('reset_tracking'), key="reset_btn", use_container_width=True):
-                self.reset_tracking()
+        # with col3:
+        #     if st.button(_('reset_tracking'), key="reset_btn", use_container_width=True):
+        #         self.reset_tracking()
         
-        with col4:
-            if st.button(_('save_results'), key="save_btn", use_container_width=True):
-                self.save_results()
+        # with col4:
+        #     if st.button(_('save_results'), key="save_btn", use_container_width=True):
+        #         self.save_results()
+        pass
     
     def connect_camera(self, camera_id: int):
         """Connect to specified camera with enhanced error handling"""
@@ -4321,14 +4326,15 @@ class VisionPlatform:
             self.handle_application_error(e)
     
     def render_system_status_footer(self):
-        """Render enhanced system status footer"""
-        st.markdown("---")
-        st.markdown(f"""
-        <div class="system-footer">
-            <h4>{_('vision_platform_title')}</h4>
-            <p style="margin: 5px 0 0 0;">{_('professional_computer_vision_system')}</p>
-        </div>
-        """, unsafe_allow_html=True)
+        # """Render enhanced system status footer"""
+        # st.markdown("---")
+        # st.markdown(f"""
+        # <div class="system-footer">
+        #     <h4>{_('vision_platform_title')}</h4>
+        #     <p style="margin: 5px 0 0 0;">{_('professional_computer_vision_system')}</p>
+        # </div>
+        # """, unsafe_allow_html=True)
+        pass
     
     
     def handle_application_error(self, error: Exception):
