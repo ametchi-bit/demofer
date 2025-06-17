@@ -744,7 +744,7 @@ if __name__ == '__main__':
         
         try:
             # Initialize enhanced processor
-            processor = initialize_enhanced_license_plate_system("yolo11n.pt", "./models/license_plate_detector.pt")
+            processor = initialize_enhanced_license_plate_system("yolo11n.pt", "./weight_models/license_plate.pt")
             print("Enhanced license plate system initialized successfully")
             
             # Test with camera if available
