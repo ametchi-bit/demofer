@@ -682,12 +682,8 @@ class StyleManager:
         </style>
         """
     
-    def create_main_header(self, title: str, subtitle: str, logo_data_uri=None) -> str:
+    def create_main_header(self, title: str, subtitle: str) -> str:
         """Create main application header"""
-        logo_html = ""
-        if logo_data_uri:
-            logo_html = f'<div class="header-logo"><img src="{logo_data_uri}" alt="Logo" style="height: 60px; width: auto; max-width: 200px;"></div>'
-
         text_html = f"""
         <div class="header-text">
             <h1>{title}</h1>

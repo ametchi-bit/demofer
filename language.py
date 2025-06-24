@@ -89,7 +89,7 @@ class LanguageManager:
     
     def language_selector(self):
         """Render enhanced language selector in sidebar with proper state management"""
-        st.sidebar.markdown("### 🌐 Language / Langue")
+        #st.sidebar.markdown("### 🌐 Language / Langue")
         
         # Create language options for display
         language_display_names = []
@@ -121,7 +121,7 @@ class LanguageManager:
         
         # Create the selectbox
         selected_index = st.sidebar.selectbox(
-            "Select Language / Sélectionner la Langue",
+            "Sélectionner la Langue",
             range(len(language_display_names)),
             format_func=lambda x: language_display_names[x],
             index=current_index,
@@ -747,7 +747,7 @@ class LanguageManager:
         # TODO: Add actual French translations here
         return {
             # Application Title and General
-            'app_title': 'Moteur d\'Analyse Visuelle',
+            'app_title': 'Moteur d\'Analyse Visuelle par l\'intelligence Artificielle',
             'app_subtitle': 'Système avancé de vision par ordinateur & analyse',
             'professional_computer_vision_system': 'Système professionnel de vision et d\'analyse par ordinateur',
             'vision_platform_title': 'Plateforme Visuelle YOLO11',

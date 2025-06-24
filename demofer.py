@@ -703,43 +703,26 @@ class VisionPlatform:
     def render_main_header(self):
         """Render the main application header with language support"""
         
-        # Create columns for layout
-        col1, col2, col3 = st.columns([1, 3, 1])
+        # Main title
+        st.markdown(f"""
+        <div style="text-align: center; padding: 1rem 0;">
+            <h1 style="color: #667eea; margin: 0; font-size: 2.5rem; font-weight: 700;">
+                {_('app_title')}
+            </h1>
+            <p style="color: #666; margin: 0.5rem 0; font-size: 1.2rem;">
+                {_('app_subtitle')}
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
         
-        with col1:
-            # Try to display logo
-            try:
-                if Path("media/fer_logo.png").exists():
-                    st.image("media/fer_logo.png", width=120)
-                else:
-                    st.markdown("### 🤖")
-            except:
-                st.markdown("### 🤖")
-        
-        with col2:
-            # Main title
-            st.markdown(f"""
-            <div style="text-align: center; padding: 1rem 0;">
-                <h1 style="color: #667eea; margin: 0; font-size: 2.5rem; font-weight: 700;">
-                    {_('app_title')}
-                </h1>
-                <p style="color: #666; margin: 0.5rem 0; font-size: 1.2rem;">
-                    {_('app_subtitle')}
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
-        
-        with col3:
-            st.empty()
-        
-        st.markdown("---")
+    
     
     def render_sidebar(self):
         """Render the enhanced sidebar with all controls"""
         with st.sidebar:
             try:
                 if os.path.exists("media/fer_logo.png"):
-                    st.logo("media/fer_logo.png")
+                    st.logo("media/fer_logo.png", size="large")
                 else:
                     st.markdown("### 🤖 Vision Platform")
             except Exception:
